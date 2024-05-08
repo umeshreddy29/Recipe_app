@@ -1,14 +1,13 @@
-package com.example.racipeapp
+package com.example.racipeapp.Activitys
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import com.example.racipeapp.Databases.AppDatabase
+import com.example.racipeapp.Adapters.CategoryAdapter
+import com.example.racipeapp.Recipe
 import com.example.racipeapp.databinding.ActivityCategoryBinding
-import com.example.racipeapp.databinding.ActivityHomeBinding
 
 class CategoryActivity : AppCompatActivity() {
     
@@ -39,7 +38,7 @@ class CategoryActivity : AppCompatActivity() {
 
         binding.rvCategory.layoutManager = LinearLayoutManager(this)
 
-        var db = Room.databaseBuilder(this@CategoryActivity,AppDatabase::class.java,"db_name")
+        var db = Room.databaseBuilder(this@CategoryActivity, AppDatabase::class.java,"db_name")
             .allowMainThreadQueries()
             .fallbackToDestructiveMigration()
             .createFromAsset("recipe.db")

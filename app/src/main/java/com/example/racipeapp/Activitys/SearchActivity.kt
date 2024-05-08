@@ -1,16 +1,15 @@
-package com.example.racipeapp
+package com.example.racipeapp.Activitys
 
 import android.annotation.SuppressLint
-import android.inputmethodservice.InputMethodService
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import com.example.racipeapp.Databases.AppDatabase
+import com.example.racipeapp.Recipe
+import com.example.racipeapp.Adapters.SearchAdapter
 import com.example.racipeapp.databinding.ActivitySearchBinding
 
 class SearchActivity : AppCompatActivity() {

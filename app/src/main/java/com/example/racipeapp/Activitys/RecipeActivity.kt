@@ -1,15 +1,13 @@
-package com.example.racipeapp
+package com.example.racipeapp.Activitys
 
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
+import com.example.racipeapp.R
 import com.example.racipeapp.databinding.ActivityRecipeBinding
 
 class RecipeActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.example.racipeapp
+package com.example.racipeapp.Adapters
 
 import android.content.Context
 import android.content.Intent
@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.racipeapp.Activitys.RecipeActivity
+import com.example.racipeapp.Recipe
 import com.example.racipeapp.databinding.PopularRvItemBinding
 
 class PopularAdapter(var dataList: ArrayList<Recipe>, var context: Context) :
@@ -14,7 +16,7 @@ class PopularAdapter(var dataList: ArrayList<Recipe>, var context: Context) :
     inner class ViewHolder(var binding: PopularRvItemBinding) :
         RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = PopularRvItemBinding.inflate(LayoutInflater.from(context), parent, false)
         return ViewHolder(binding)
     }
@@ -23,7 +25,7 @@ class PopularAdapter(var dataList: ArrayList<Recipe>, var context: Context) :
         return dataList.size
     }
 
-    override fun onBindViewHolder(holder: PopularAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Glide.with(context).load(dataList.get(position).img).into(holder.binding.popularImg)
 
         holder.binding.popularTxt.text = dataList.get(position).tittle

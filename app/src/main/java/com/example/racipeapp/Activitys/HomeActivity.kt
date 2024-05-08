@@ -1,4 +1,4 @@
-package com.example.racipeapp
+package com.example.racipeapp.Activitys
 
 import android.app.Dialog
 import android.content.Intent
@@ -11,6 +11,10 @@ import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import com.example.racipeapp.Databases.AppDatabase
+import com.example.racipeapp.Adapters.PopularAdapter
+import com.example.racipeapp.R
+import com.example.racipeapp.Recipe
 import com.example.racipeapp.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
