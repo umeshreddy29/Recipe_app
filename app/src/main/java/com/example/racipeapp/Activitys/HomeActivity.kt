@@ -52,6 +52,14 @@ class HomeActivity : AppCompatActivity() {
             myIntent.putExtra("CATEGORY", "Drinks")
             startActivity(myIntent)
         }
+
+        binding.desserts.setOnClickListener {
+            var myIntent = Intent(this@HomeActivity, CategoryActivity::class.java)
+            myIntent.putExtra("TITTLE", "Desserts")
+            myIntent.putExtra("CATEGORY", "Desserts")
+            startActivity(myIntent)
+        }
+
         binding.more.setOnClickListener {
             var dialog = Dialog(this)
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -64,12 +72,7 @@ class HomeActivity : AppCompatActivity() {
             dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             dialog.window!!.setGravity(Gravity.BOTTOM)
         }
-        binding.desserts.setOnClickListener {
-            var myIntent = Intent(this@HomeActivity, CategoryActivity::class.java)
-            myIntent.putExtra("TITTLE", "Desserts")
-            myIntent.putExtra("CATEGORY", "Desserts")
-            startActivity(myIntent)
-        }
+
 
     }
 
